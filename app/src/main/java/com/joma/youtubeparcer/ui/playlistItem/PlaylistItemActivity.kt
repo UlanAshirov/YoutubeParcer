@@ -1,8 +1,8 @@
 package com.joma.youtubeparcer.ui.playlistItem
 
 import android.os.Bundle
-import androidx.lifecycle.GeneratedAdapter
 import androidx.lifecycle.ViewModelProvider
+import com.joma.youtubeparcer.R
 import com.joma.youtubeparcer.base.BaseActivity
 import com.joma.youtubeparcer.databinding.ActivityPlaylistItemBinding
 import com.joma.youtubeparcer.domain.common.Resource
@@ -31,9 +31,9 @@ class PlaylistItemActivity :
     }
 
     private fun setupUI() {
-        binding.txtMainTitle.text = "HellYeahPlay"
+        binding.txtMainTitle.text = getString(R.string.title)
         binding.txtMainDescription.text =
-            "Ты попал к 32 летнему деду-мизантропу с психическими расстройствами, который смотрит видосы, любит аниме, Minecraft и детей."
+            getString(R.string.description)
         adapter = PlaylistItemAdapter()
         binding.rvPlayer.adapter = adapter
         viewModel = ViewModelProvider(this)[PlaylistItemViewModel::class.java]
