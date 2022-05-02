@@ -139,4 +139,21 @@
         android:src="@drawable/ic_baseline_play_arrow_24"
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="end|bottom" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/check_internet"
+            layout="@layout/check_internet"
+            android:visibility="gone" />
+    </FrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

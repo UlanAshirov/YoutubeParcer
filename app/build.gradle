@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -15,6 +15,7 @@ android {
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -70,4 +71,29 @@ dependencies {
     //Hilt
     implementation("com.google.dagger:hilt-android:2.41")
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
+
+    // KoinDI
+    implementation "io.insert-koin:koin-android:2.2.2"
+    implementation "io.insert-koin:koin-androidx-scope:2.2.2"
+    implementation "io.insert-koin:koin-androidx-viewmodel:2.2.2"
+    implementation "io.insert-koin:koin-androidx-fragment:2.2.2"
+
+    // Architecture Components
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+
+    //Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
+
+    //youtubePlayer
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
+
+    //ExoPlayer dependency
+    implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+
+    //Multi Dex enable
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    //Youtube extractor
+    implementation 'com.github.haarigerharald:android-youtubeextractor:2.1.0'
 }

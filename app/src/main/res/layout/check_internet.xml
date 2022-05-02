@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/btn_bg_check_internet"
         android:text="Try again"
         android:textAllCaps="false"
         android:textColor="@color/white"
